@@ -4,7 +4,7 @@ html,page,body{
     margin: 0;
 }
 page {
-    font-size: 180px;
+    font-size: 380px;
     padding-top: 30%;
     padding-left: 30%;
     height: 100%;
@@ -30,7 +30,7 @@ page {
     animation: winner  10s infinite ;
 }
 #z{
-    font-size: 36px;
+    font-size: 160px;
     display: block;
     animation: z 10s infinite;
 
