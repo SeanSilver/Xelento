@@ -13,26 +13,26 @@ page {
 }
 #spring{
     background: lightgreen;
-    animation: spring  10s infinite ;
+    animation: spring  220s infinite ;
 }
 #summer{
     background: red;
-    animation: summer  10s infinite ;
+    animation: summer  220s infinite ;
 }
 #fall{
     background-image: url("../images/123.jpg");
     background-size: 100% 100% ;
-    animation: fall  10s infinite ;
+    animation: fall  220s infinite ;
 }
 #winter{
     background: black;
     color: white;
-    animation: winner  10s infinite ;
+    animation: winner  220s infinite ;
 }
 #z{
     font-size: 160px;
     display: block;
-    animation: z 10s infinite;
+    animation: z 220s infinite;
 
 }
 @keyframes z {
@@ -46,7 +46,7 @@ page {
         opacity: 100
     }
     90% {
-        opacity: 100
+        opacity: 0
     }
     100% {
         opacity: 0

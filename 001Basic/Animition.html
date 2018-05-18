@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <title>这只是一个测试</title>
     <link rel="Stylesheet" type="text/css" href="css/page.css" />
+    <script>
+        function audioAutoplay(id) {
+            var audio = document.getElementById(id);
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady",function(){
+                audio.play();
+            },false);
+            document.addEventListener('yinxinJSBridgeReady',function () {
+                audio.play();
+            },false);
+        }
+    </script>
 </head>
-<body>
+<body onload="audioAutoplay('bgm');">
+<audio id="bgm" src="bgm/三无MarBlue,泠鸢yousa - 寄明月（Cover SING女团 ／ 乐正绫）.mp3" preload="auto" autoplay="autoplay"></audio>
     <page id="spring">春</page>
     <page id="summer">夏</page>
     <page id="fall">秋</page>
