@@ -13,26 +13,26 @@ page {
 }
 #spring{
     background: lightgreen;
-    animation: spring  220s infinite ;
+    animation: spring  10s infinite ;
 }
 #summer{
     background: red;
-    animation: summer  220s infinite ;
+    animation: summer  10s infinite ;
 }
 #fall{
     background-image: url("../images/123.jpg");
-    background-size: 100% 100% ;
-    animation: fall  220s infinite ;
+    background-size: 100% 120% ;
+    animation: fall  10s infinite ;
 }
 #winter{
     background: black;
     color: white;
-    animation: winner  220s infinite ;
+    animation: winner  10s infinite ;
 }
 #z{
     font-size: 160px;
     display: block;
-    animation: z 220s infinite;
+    animation: z 10s infinite;
 
 }
 @keyframes z {
