@@ -20,12 +20,50 @@ page {
     animation: summer  10s infinite ;
 }
 #fall{
+    background-image: url("../images/123.jpg");
     animation: fall  10s infinite ;
 }
 #winter{
     background: black;
     color: white;
     animation: winner  10s infinite ;
+}
+#z{
+    font-size: 36px;
+    display: block;
+    animation: z 10s infinite;
+
+}
+@keyframes z {
+    0% {
+        opacity: 0
+    }
+    70% {
+        opacity: 0
+    }
+    80% {
+        opacity: 100
+    }
+    90% {
+        opacity: 100
+    }
+    100% {
+        opacity: 0
+    }
+}
+@keyframes winner {
+    0% {
+        opacity: 0
+    }
+    60% {
+        opacity: 0
+    }
+    80% {
+        opacity: 100
+    }
+    100% {
+        opacity: 0
+    }
 }
 @keyframes spring {
     0%{opacity: 0}
