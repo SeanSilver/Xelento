@@ -21,6 +21,7 @@ page {
 }
 #fall{
     background-image: url("../images/123.jpg");
+    background-size: 100% 100% ;
     animation: fall  10s infinite ;
 }
 #winter{
