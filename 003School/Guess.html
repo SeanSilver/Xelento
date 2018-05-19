@@ -8,8 +8,8 @@
         body {
             text-align:center;
             background-image: url(img/2.jpg);
-            height: 800px;
-            background-size: 800px ;
+            height: 1000px;
+            background-size: 1000px ;
         }
 
         button {
@@ -20,13 +20,14 @@
             width: 100px;
         }
         #computer{
-            padding-left: 150px;
-            padding-top: 150px;
+            padding-left: 130px;
+            padding-top: 130px;
         }
     </style>
 </head>
 
 <body>
+
 <audio src="bgm/Porter RobinsonMadeon - Shelter [mqms2].mp3" autoplay="autoplay" controls="controls"></audio>
 <!--		<button onclick="changePic()">百度一下</button>
 -->
@@ -39,6 +40,7 @@
     <img id="computer" src="img/j.jpg" alt="" onclick="check(3)"/>
 </div>
 <script>
+    alert("出：布是1；石头是2；剪刀是3！祝您游戏愉快~~")
     var cpu;
     var computer = document.getElementById("computer");
 
@@ -58,7 +60,7 @@
     }
     setInterval(changePic,50)
     function check(mine){
-        alert("mine:"+mine+";cpu:"+cpu);
+        alert("你的决定:"+mine+";系统的决定:"+cpu);
         if(mine==cpu){
             alert("平局~~")
         }
