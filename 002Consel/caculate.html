@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <title>狩生/榭兰图</title>
     <script>
-        var  jk = prompt("请输入：");
-        var kl = prompt("请再次输入：")
-        jk = jk + kl;
-        alert(1+2);
+       var prcice,count;
+       count = prompt("你要几杯？");
+       if(count % 2 == 0)
+       {
+           count = count/2*15;
+       }
+       else{
+           count = count*7.5+2.5;
+       }
+       alert(count);
     </script>
 </head>
 <body>
