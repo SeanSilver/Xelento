@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>狩生/榭兰图</title>
+    <style type="text/css">
+        body{
+            background-image: url(img/4.jpg);
+
+        }
+    </style>
+</head>
+<body>
+<audio src="bgm/Christopher - Free Fall [mqms2].mp3" autoplay="autoplay" controls="controls"></audio>
+<button onclick="prevMusic()">上一首</button>
+<button onclick="move(10)">-10s</button>
+<button onclick="move(10)">+10s</button>
+<button id="play" onclick="playOrpause()">播放</button>
+<button onclick="nextMusic()">下一首</button>
+
+<script>
+    var list=["bgm/AZU (アズ) - あなたに爱たくて (想爱你) [mqms2].mp3","bgm/Christopher - Free Fall [mqms2].mp3","bgm/CRITTY - 轮回之境 [mqms2].mp3"];
+    var index=0;
+    var ele=document.getElementById('audio');
+
+    function playOrpause(){
+        var play=document.getElementById('play');
+        if(play.innerHTML='播放'){
+            ele.play();
+            play.innerHTML = '播放';
+        }
+        else{
+            ele.pause();
+            play.innerHTML = '暂停'
+        }
+    }
+
+    function move(second){
+        if(!ele.currentTime+second<0)
+        {
+            ele.currentTime+=second;
+        }
+        else{
+            ele.currentTime=0;
+        }
+    }
+    function nextMusic(){
+        if(index+1>(list.length-1))
+        {
+            index = 0;
+        }
+        else{
+            index+=1;
+        }
+        ele.src=list[index];
+        ele.play();
+    }
+    function preMusic(){
+        if(index-1<0)
+        {
+            index=list.length-1;
+        }
+        else{
+            index-=1;
+        }
+        ele.src=list[index];
+        ele.play();
+    }
+</script>
+</body>
+</html>
