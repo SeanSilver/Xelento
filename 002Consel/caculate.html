@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>狩生/榭兰图</title>
+    <style>
+        body {
+            font-size: 50px;
+        }
+    </style>
     <script>
-       var prcice,count;
-       count = prompt("你要几杯？");
-       if(count % 2 == 0)
-       {
-           count = count/2*15;
-       }
-       else{
-           count = count*7.5+2.5;
-       }
-       alert(count);
+        function isInterger(c) {
+
+            return c % 1 === 0
+
+    }
+
+    var price = 56
+    var count
+    count = prompt(price + "元一杯，你要几杯？")
+
+    if (isNaN(count)) {
+        document.write("NO,please try again!")
+    }
+    else {
+        if (isInterger(count)) {
+            if (count % 2 == 0) {
+                totalPrice = count * price * 0.75;
+            }
+            else {
+                totalPrice = count * price * 0.75 + price / 4;
+            }
+            document.write("你一共消费了" + totalPrice + "元");
+        }
+        else {
+            document.write("DON'T TRY AGAIN!");
+        }
+    }
+
     </script>
 </head>
 <body>

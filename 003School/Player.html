@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>狩生/榭兰图</title>
+</head>
+<body>
+    <style>
+        #container{
+            overflow: hidden;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #disk{
+            animation: z linear 6s infinite;
+            width:  100%;
+            position: relative;
+        }
+        #pan{
+            width:100%;
+            display: block;
+        }
+        #cover{
+            position:absolute;
+            width: 30%;
+            height: 30%;
+            background: aqua;
+            background-image: url("img/3.jpg");
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            top: 35%;
+            left: 35%;
+        }
+        @keyframes z {
+            0%{
+                transform: rotateZ(0deg);
+            }
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+        #wrap{
+            overflow: hidden;
+        }
+    </style>
+    <div id="container">
+        <div id="wrap">
+       <div id="disk">
+           <img id="pan" src="img/j.jpg">;
+           <div id="cover"></div>
+       </div>
+        </div>
+    </div>
+</body>
+</html>

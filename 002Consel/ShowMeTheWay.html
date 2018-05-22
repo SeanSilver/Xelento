@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>狩生/榭兰图</title>
+    <style>
+        body {
+            font-size: 500px;
+            text-align: center;
+            background-image: url(img/6.jpg);
+            height: 1000px;
+            background-size: 1000px;
+        }
+    </style>
+
+</head>
+<body>
+<p id="demo"></p>
+</body>
+<script>
+    // 随机数函数
+    //        var a = Math.random();
+    //        if(a > 0.5)
+    //        {
+    //            document.write("天行健，君子以自强不息");
+    //        }
+    //        else {
+    //            document.write("地势坤，君子以厚德载物");
+    //        }
+
+    // 投色子，以图片显示
+    // var a = Math.random();
+    // a = Math.floor(a * 6 + 1);
+    // document.write("<img src = \"img/"+a+".jpg\"/>");
+
+    //    猜骰子
+    var random = Math.random();
+    var binggo = false;
+
+
+    function guess() {
+        var str;
+        if (binggo) {
+            return;
+        }
+
+        var guess = prompt("你猜骰子是几？");
+
+        if (!Number.isInteger(guess / 1) || guess > 6 || guess < 1) {
+            document.getElementById("demo").innerHTML = "输入有误";
+            return;
+        }
+
+
+        console.info("random====" + random);
+        console.info("guess====" + guess);
+        var diff = Math.abs(random-guess);
+        console.info("diff====" + diff);
+
+
+        if (guess==random) {
+            str = "对了！"+"<img src=\"img/"+random+".jpg\"/>";
+            binggo = true;
+        }
+        else if (guess > random) {
+            if (diff > 1) {
+                str = "太大";
+            }
+            else {
+                str = "有点大";
+            }
+        }
+        else
+        {
+            if (diff > 1) {
+                str = "太小";
+            }
+            else {
+                str = "有点小";
+            }
+        }
+        document.getElementById("demo").innerHTML = str;
+    }
+    random = Math.floor(random * 6 + 1);
+    console.info(random);
+    //
+    // while (1) {
+    //     guess();
+    // }
+    guess();
+    guess();
+
+</script>
+</html>

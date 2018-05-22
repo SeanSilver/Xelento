@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>狩生/榭兰图</title>
     <style type="text/css">
+        button{
+            height: 200px;
+            width: 200px;
+            background: lightcoral;
+        }
         body{
             background-image: url(img/4.jpg);
 
@@ -11,37 +16,37 @@
     </style>
 </head>
 <body>
-<audio src="bgm/Christopher - Free Fall [mqms2].mp3" autoplay="autoplay" controls="controls"></audio>
+<audio id="audio" src="bgm/Christopher - Free Fall [mqms2].mp3" controls="controls"></audio>
 <button onclick="prevMusic()">上一首</button>
-<button onclick="move(10)">-10s</button>
+<button onclick="move(-10)">-10s</button>
 <button onclick="move(10)">+10s</button>
-<button id="play" onclick="playOrpause()">播放</button>
+<button id="play" onclick="playOrPause()">播放</button>
 <button onclick="nextMusic()">下一首</button>
 
 <script>
-    var list=["bgm/AZU (アズ) - あなたに爱たくて (想爱你) [mqms2].mp3","bgm/Christopher - Free Fall [mqms2].mp3","bgm/CRITTY - 轮回之境 [mqms2].mp3"];
+    var list=["bgm/AZU (アズ) - あなたに爱たくて (想爱你).mp3","bgm/Christopher - Free Fall [mqms2].mp3","bgm/CRITTY - 轮回之境 [mqms2].mp3"];
     var index=0;
     var ele=document.getElementById('audio');
 
-    function playOrpause(){
+    function playOrPause(){
         var play=document.getElementById('play');
-        if(play.innerHTML='播放'){
+        if(play.innerHTML=='播放'){
             ele.play();
-            play.innerHTML = '播放';
+            play.innerHTML = '暂停';
         }
         else{
             ele.pause();
-            play.innerHTML = '暂停'
+            play.innerHTML = '播放'
         }
     }
 
     function move(second){
-        if(!ele.currentTime+second<0)
+        if(ele.currentTime+second<0)
         {
-            ele.currentTime+=second;
+            ele.currentTime=0;
         }
         else{
-            ele.currentTime=0;
+            ele.currentTime+=second;
         }
     }
     function nextMusic(){
@@ -55,7 +60,7 @@
         ele.src=list[index];
         ele.play();
     }
-    function preMusic(){
+    function prevMusic(){
         if(index-1<0)
         {
             index=list.length-1;

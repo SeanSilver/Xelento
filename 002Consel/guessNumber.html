@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>狩生/榭兰图</title>
+    <style>
+        body{
+            font-size: 500px;
+            background-image: url("img/3.jpg");
+        }
+    </style>
+    <script>
+        function getAnswer () {
+            var random = Math.floor(Math.random()*4+1);
+            var str = String.fromCharCode(random+64);
+            document.write(str);
+        }
+      var x =1;
+        for (;x<=20;x++){
+            getAnswer();
+            if(x%5==0){
+                document.write("<br>");
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
